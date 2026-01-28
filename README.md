@@ -2,6 +2,8 @@
 
 A modern Rock-Paper-Scissors game built to visualize Data Structures. Instead of standard logic, it uses a **Directed Graph** for efficient rule checks and a **Frequency Tree** to create an AI that learns and predicts your patterns.
 
+![Project Preview](https://via.placeholder.com/800x400/0d1117/2f81f7?text=Cyber-Process+Dashboard)
+
 ## 📝 About the Project
 
 This project demonstrates how Computer Science concepts can be applied to simple games. It features a responsive light UI, smooth animations, and a "smart" opponent.
