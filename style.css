@@ -1,0 +1,184 @@
+:root {
+    --bg-color: #6883b5;
+    --text-color: #ffffff;
+    --card-bg: #4321ca;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to allow scrolling from top */
+    min-height: 100vh;      /* Changed from height: 100vh */
+    overflow-y: auto;       /* ENABLE SCROLLING */
+    padding: 40px 0;
+    opacity: 85%;        /* Add space at top/bottom */
+}
+
+.game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    background: #36a5c3;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 4px solid #3742fa;
+}
+
+header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.highlight { color: #3742fa; }
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    background: #2721cd30;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+.score-box { text-align: center; }
+.score-box p { font-size: 1.5rem; opacity: 0.8; margin-bottom: 5px; }
+.score-box span { font-size: 1.5rem; font-weight: bold; }
+.high-score span { color: #ff0202; text-shadow: 0 0 10px #ffa502; }
+
+/* Battle Area */
+.battle-ground {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hand {
+    font-size: 6rem;
+    transition: transform 0.2s ease;
+}
+
+.result-area h2 { font-family: 'Fredoka One'; font-size: 2rem; }
+.result-area p { font-size: 1.5rem; opacity: 0.7; }
+
+/* Buttons */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    border: none;
+    padding: 50px 50px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    color: white;
+}
+
+.option-btn {
+    background: var(--color);
+    box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+}
+
+.option-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 0 rgba(0,0,0,0.2); }
+.option-btn:active { transform: translateY(2px); box-shadow: none; }
+
+.reset-btn {
+    margin-top: 40px;
+    background: #f6ff00;
+    border-radius: 50px;
+    box-shadow: 0 8px 0 rgba(0,0,0,0.2);
+    color: #000000;
+    font-size: 1.5rem;
+}
+.reset-btn:hover {  transform: translateY(-3px); box-shadow: 0 10px 0 rgba(0,0,0,0.2); }
+
+/* Animations */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(20deg); }
+    50% { transform: rotate(-20deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.shaking { animation: shake 0.5s; }
+
+/* About Section Styling */
+.about-section {
+    margin-top: 50px;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #576f65;
+}
+
+.about-section h3 {
+    font-family: 'Fredoka One', cursive;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    text-align: left;
+}
+
+.info-card {
+    background: #1677d2;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #3742fa; /* Blue accent border */
+    box-shadow: 0 4px 6px rgba(244, 64, 28, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    background: #1d33c1;
+}
+
+.info-card h4 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-card p {
+    font-size: 1.2rem;
+    color: #ced6e0;
+    line-height: 1.6;
+}
+
+.info-card strong {
+    color: #2ed573; /* Highlight technical terms */
+}
+
+.icon {
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}

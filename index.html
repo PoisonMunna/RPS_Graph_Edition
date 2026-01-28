@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="6.png">
+    <title>RPS: Graph Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <header>
+            <h1>ROCK <span class="highlight">PAPER</span> SCISSORS</h1>
+            <div class="score-board">
+                <div class="score-box">
+                    <p>YOU</p>
+                    <span id="user-score">0</span>
+                </div>
+                <div class="score-box high-score">
+                    <p>HIGH SCORE</p>
+                    <span id="high-score">0</span>
+                </div>
+                <div class="score-box">
+                    <p>AI</p>
+                    <span id="ai-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="battle-ground">
+                <div class="hand-container">
+                    <div class="hand" id="user-hand">🪨</div>
+                    <p>You</p>
+                </div>
+
+                <div class="result-area">
+                    <h2 id="result-text">CHOOSE!</h2>
+                    <p id="sub-text">The AI is watching...</p>
+                </div>
+
+                <div class="hand-container">
+                    <div class="hand" id="ai-hand">🪨</div>
+                    <p>AI</p>
+                </div>
+            </div>
+
+            <div class="options">
+                <button class="btn option-btn" data-choice="rock" style="--color: #ff4757;">
+                    🪨 Rock
+                </button>
+                <button class="btn option-btn" data-choice="paper" style="--color: #2ed573;">
+                    📄 Paper
+                </button>
+                <button class="btn option-btn" data-choice="scissors" style="--color: #1e90ff;">
+                    ✂️ Scissors
+                </button>
+            </div>
+            
+            <button class="btn reset-btn" onclick="resetScores()">Reset Scores</button>
+        </main>
+        <section class="about-section">
+    <h3>⚙️ Project Architecture</h3>
+    <div class="cards-grid">
+        
+        <div class="info-card">
+            <h4><span class="icon">🕸️</span> Graph Logic</h4>
+            <p>
+                Game rules are stored as a <strong>Directed Graph</strong> (Adjacency List). 
+                Instead of nested <code>if/else</code> chains, the system performs an 
+                <strong>O(1)</strong> lookup to determine the winner, making the logic 
+                scalable to N-move variants (e.g., RPS-Lizard-Spock).
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h4><span class="icon">🧠</span> Pattern Tree AI</h4>
+            <p>
+                The opponent utilizes a <strong>Frequency Tree</strong> (Markov Chain) to analyze user behavior. 
+                It constructs a decision tree of your past moves (state history) to calculate the highest 
+                probability of your next action and counters it dynamically.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h4><span class="icon">💾</span> State Persistence</h4>
+            <p>
+                High scores are managed via the browser's <strong>LocalStorage API</strong>, 
+                demonstrating persistent state management without a backend database. 
+                Data remains intact across sessions and page reloads.
+            </p>
+        </div>
+
+    </div>
+</section>
+        <footer>
+            <p><strong>Powered by Graph Logic & Pattern Trees</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
