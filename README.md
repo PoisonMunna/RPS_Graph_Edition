@@ -2,7 +2,7 @@
 
 A modern Rock-Paper-Scissors game built to visualize Data Structures. Instead of standard logic, it uses a **Directed Graph** for efficient rule checks and a **Frequency Tree** to create an AI that learns and predicts your patterns.
 
-![Project Preview](https://via.placeholder.com/800x400/0d1117/2f81f7?text=Cyber-Process+Dashboard)
+![Project Preview](https://poisonmunna.github.io/RPS_Graph_Edition/)
 
 ## 📝 About the Project
 
