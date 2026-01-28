@@ -1,10 +1,10 @@
-# Neon RPS: Graph & Tree Edition
+# RPS: Graph & Tree Edition
 
 A modern Rock-Paper-Scissors game built to visualize Data Structures. Instead of standard logic, it uses a **Directed Graph** for efficient rule checks and a **Frequency Tree** to create an AI that learns and predicts your patterns.
 
 ## 📝 About the Project
 
-This project demonstrates how Computer Science concepts can be applied to simple games. It features a responsive neon UI, smooth animations, and a "smart" opponent.
+This project demonstrates how Computer Science concepts can be applied to simple games. It features a responsive light UI, smooth animations, and a "smart" opponent.
 
 ### How it Works (The Logic)
 
@@ -19,7 +19,7 @@ This project demonstrates how Computer Science concepts can be applied to simple
 ## ✨ Features
 
 * **Smart AI:** Learns your move patterns over time.
-* **Neon UI:** Beautiful dark mode design with glowing effects.
+* **Light UI:** Beautiful dark mode design with glowing effects.
 * **High Score:** Saves your best score using LocalStorage.
 * **Responsive:** Works on both mobile and desktop.
 
